@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 with open("input", "r") as f:
     elf_cals = [0]
     current_elf = 0
@@ -11,4 +12,6 @@ with open("input", "r") as f:
             current_elf += 1
             elf_cals.append(0)
 
-    print(elf_cals)
+    print(max(elf_cals)) # part 1
+    elf_cals.sort()
+    print(sum(elf_cals[-3::1]))
